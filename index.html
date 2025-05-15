@@ -29,26 +29,28 @@
             background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
             color: white;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         /* قائمة الهامبرجر */
         .menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 1000;
-    background: transparent !important; /* شفاف تمامًا */
-    color: white; /* لون الأشرطة (يمكن تغييره) */
-    border: none !important;
-    font-size: 24px;
-    padding: 8px 12px;
-    border-radius: 0; /* إزالة الحواف الدائرية */
-    transition: all 0.3s ease;
-    /* إزالة جميع التأثيرات الإضافية */
-    backdrop-filter: none !important;
-    box-shadow: none !important;
-}
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            background: transparent !important;
+            color: white;
+            border: none !important;
+            font-size: 24px;
+            padding: 8px 12px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            backdrop-filter: none !important;
+            box-shadow: none !important;
+        }
+        
         .menu-btn:hover {
             background: rgba(0, 198, 255, 0.4);
         }
@@ -129,16 +131,19 @@
         
         .header {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
+            padding-top: 15px;
         }
         
         .logo {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             text-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
             letter-spacing: 0.5px;
+            line-height: 1.4;
+            padding: 0 10px;
         }
         
         .search-container {
@@ -169,6 +174,7 @@
         .games-container {
             width: 100%;
             margin: 0 auto;
+            flex-grow: 1;
         }
         
         .games-grid {
@@ -292,6 +298,41 @@
             grid-column: 1 / -1;
         }
 
+        /* الفوتر الجديد */
+        .footer {
+            margin-top: 30px;
+            padding: 20px 15px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            text-shadow: 0 0 8px rgba(0, 198, 255, 0.6);
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 10px;
+        }
+
         @media (min-width: 400px) {
             .games-grid {
                 gap: 12px;
@@ -308,6 +349,18 @@
             .view-button {
                 font-size: 12px;
                 padding: 7px;
+            }
+            
+            .logo {
+                font-size: 20px;
+            }
+            
+            .footer-links a {
+                font-size: 13px;
+            }
+            
+            .copyright {
+                font-size: 12px;
             }
         }
     </style>
@@ -480,6 +533,20 @@
                     <a href="game/stumble-guys" class="view-button">View Game</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- الفوتر الجديد -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            © 2023 Game Mods Hub. All Rights Reserved.
         </div>
     </div>
 
